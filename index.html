@@ -195,6 +195,12 @@
   .content a:hover{ background:var(--accent); color:var(--paper); text-decoration:none; }
   .content hr{ border:none; border-top:2px dashed var(--ink); margin:12px 0; }
 
+  .pfp{
+    float:left; width:140px; height:140px; margin:2px 14px 6px 0;
+    border:2px solid var(--ink); box-shadow:3px 3px 0 var(--ink);
+    image-rendering:pixelated; background:var(--paper);
+  }
+  @media (max-width:640px){ .pfp{ width:110px; height:110px; margin-right:10px; } }
   .proj{ border:2px solid var(--ink); padding:10px 12px; margin-bottom:12px; box-shadow:3px 3px 0 var(--ink); }
   .proj h3{ font-family:'ChicagoFLF', 'Geneva', sans-serif; font-size:16px; margin-bottom:6px; }
   .proj .tags{ margin-top:6px; }
@@ -327,6 +333,7 @@
 <div class="window" id="w-about" style="top:130px; left:160px; width:460px;">
   <div class="titlebar"><div class="close"></div><span class="t">About Me</span><div class="spacer"></div></div>
   <div class="content">
+    <img class="pfp" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAACMAQAAAACGu3yTAAAHNUlEQVR4nEWVe3BU5RnGf+fLwSwJloVgSwXl4CSjxEvjbQad2qyOjpFO29VuAsULwdYpxRHSmVY74nSPylir0zEi2KGd6o5TNSYqmdKUtiKuijVekDUSIiExq1VZgoSjZi8m2fP0j3PWfn8+8zzv/X0/JN8lKUnS8RhSOxorx3hJkuT3xWuS8gzOVzFiAFgtpSKAxspRK9BpoivSHLA8wvczpjrAgImZAPEzxu8EpM+oCnRfJBprHpJnyM7CDlgTt95a6AeDU4yFpnrOyVz+PiB9aKoD4RUa3lwnz8B+PwJAuZVFu+8CAxc4ocN+3lj7KNiw58PTg+AzLJ/fBKi4150rSZp8yR9bO0ueIfL25igASlsjP4oD0is8HpRG5Q05W56BPaQAqMG/ZuApQMX6yBJJ0pByrZ/NW+PZRG6w9gBwFrtfjlzkgIpn0SxJGvMzVZvmv+QZIlOBQxyr96Sbi73YlD6dCvMuVl+6/c+LQIVYLGyQX1U7XbPGsymPDylgfXBvdOc/j2Gw2uYGwvTi7x76wUP3gMYTtqSNkv4+68UXr1mZMXDOXS5TOeDS6Cvn/SSWQl2JWUkdf0EaU1G3d/V4aDDiSNs2Sif+MaaxtSs91P2kSfpDkrRGKndt60CZzoiUlNQj+RpY6VmauGylf5cNlCIw8+tLqlFuc0RFSRqWpANtnuHkdy4lAlCXBp48kEVHl0V0QpIKksq5bg9NbiXIenqNpJnGXkPB3+pCAUwKOOQ4KN9oBcWZ2hWw0NErW0J3SUn5U+KGORPDLhx5HzUBsy9uR1O/R5IlaUzSVGPKMP1Wl8u0A9wPVDlRlG80SZVuCe0VGmIGJX8Ih3cDh4HZnoPyidnNOvJHSdNJqdwQR/nGdLN+NyZpQpK/JYXGty5Lan+4MppuiKN865VLVJuUVJakB1I2ai0+xhwXMIAW9RgKPN1OLmguWMfjKJ/Y3BzakaQVGQOFfdlgJmYArncN+dpiRwB5LlAfNdRqJpy5hS4w4hko3NTL/19D3GC137ccgIx84HCvYVKL+wFosqbSAWuO/cHyUBQ5B5Q26MkL0iE0NgAjGUOp6p0bQui0R6Ghw1LxsZmdu8MlHT6Lp3oMenlbGBeH3oH6rKGk2yZCqP4kGHEMEWtLhbXKBg9DSRvCVeDBLrgoYxM5OBkcBbR9HYw0GfLujYfcAPr5BByP28zhtisC1tS3z4C6TYaP2bUvgI4cBZ5rMizmjQuDsi51BBdmDJNVW0baAXwXC/a5lqZ7cwv7UgRzD8vWGUaouzMLEFRtPI3yrZEtOyT5SsqXf13K0uF3p3pOpIGJ+QCzWwx1O8ZWjwAzWwDKp2XQYOMTDUsqgyN/XhwVelZ0nvw1NNMYs+nbsarPVLpYsoYKhhXTVZ/fXoEi1Lno8OonGqorunJudtRm7vWT5y6usMz933LRc22vNVSuu4qZmpjNiv98cqtXYVVHC3H0zLkDV33NUteCmCXv9S+7PD+cAf+985cYNpUbX+bNivlOyzHc/frB5o/vDCE/4cdt3jy/sbTIqrAuMh2GpdHB6+NvuyHrbT+F7tgw0B0L76hUImq4+eqFRzJkQ+XMvCY0Md2XSEXmhjmWcQx37HTasqVSaL6Ig4aLB7bGK1+RfDdqmPfTpd+sjDTo4aih4y99pX7KIWR9J4vGX8h3p6j8mmUcw1sXprtyEOZt3Z1FB3cdGliLHUah+ij+8PRt17ZAWH6/EzT4XH4wBuGpU8wxDK7oK6+LmvC/1bVZ/GMb8r+IuxAOQSqKuot9A10Rl9B+i2uo3dtgSsvv+brfri1nYf9ps/eengsTv85DrRunBtcZY84MgujHpq22N7Y8+743EkQ/HDNqfC2eW3DJR01OIHwqjVqHesa7HKemLvD4V9eGp+8cLq2vTmeCUCc6rfLzmMseeJbJz6cAuBxjug+0PHigYeme2oB1S9qo7bxbblw4eiQZNnzUMVb3BQ8vTHx5tOqOoI9ntFt+b3XKGc38dt4vRwH8BSfQjzfmD2Tqou+eIkmaTMWMVm9oP314fjT5SNDbj2KWVjnNk/544V+frnKB/I37Kfc8/97RxNnR+DOSpGEXY1Wd+6e72wpNAy8CMPeJlG09/W5LofvUdOwqAD470m77q6eXSm2fpL+RABi85CZjTV+8OWM9m+VxAGpzKbRm/fiXiUQqenVSkhI9DuXu0Z4VO0512ShJ/mBrzPIPba3Jf8/+VXZ/E8DK7Wtt3dd+nDn/9UhFXfDX9Hu2mTfxam7WFx0uLmAto53yrtsLg+vro5yQpHLriTj+8I7W1n9vg+9LUvmY2o313ltdyv4hSj2AtdeLUT441LN+NAJnStL0YT9jrI8/3Rnb9xuo8gGz4KtONDh0bLStPmT5efXaGnzVOzXR6HIMwJqqaULdu3YNjwNnS1J5k9qNrMKrdceAo2nA3DsTN1b33y5+swHwHYAPNzv/A2jegdUI++TVAAAAAElFTkSuQmCC" alt="Nagwa Houmid">
     <h2 id="about-h2">Hi, I'm Nagwa</h2>
     <p><b>Software developer</b> and Computer Science graduate from the <b>University of Nottingham</b> (BSc, 2026). I spent 2.5 years as a backend developer at <b>Intelligent Plant</b> in Aberdeen, working in a real Agile team on industrial data software. Open the Experience window for that.</p>
     <p>I like building things that are actually useful. Search engines, security tooling, planners that work with your brain instead of against it.</p>
